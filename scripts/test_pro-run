@@ -9,7 +9,7 @@ import pandas as pd
 # Import from test_pro
 import test_pro
 from test_pro.lib import clean_data
-
+from test_pro.lib import try_me
 if __name__ == '__main__':
     usage = '%(prog)s'
     description = 'test_pro_description'
@@ -25,3 +25,4 @@ if __name__ == '__main__':
     res.to_csv('out.csv', index=False)
     print('==> out.csv MADE ')
     print('    shape is {}'.format(res.shape))
+    try_me()

@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 # Copyright (C) 2018 Jean Bizot <jean@styckr.io>
-""" Main lib for test_pro Project
+""" Main lib for testpro Project
 """
 
 from os.path import split
@@ -47,11 +47,14 @@ def clean_data(data):
     data.loc[:, 'Frequency'] = data['Frequency'].map(drows)
     return data
 
+def try_me():
+    print("Hi, my name is ludo, please join my project to build a nutri_score algorithm with the openfoodfacts database")
 
 if __name__ == '__main__':
     # For introspections purpose to quickly get this functions on ipython
-    import test_pro
-    folder_source, _ = split(test_pro.__file__)
+    import testpro
+    folder_source, _ = split(testpro.__file__)
     df = pd.read_csv('{}/data/data.csv.gz'.format(folder_source))
     clean_data = clean_data(df)
     print(' dataframe cleaned')
+    print(try_me())
